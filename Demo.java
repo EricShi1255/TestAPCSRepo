@@ -7,6 +7,18 @@ public class Demo {
             System.out.println();
         }
     }
+
+    public static String arrToString(int[] arr){
+        if (arr.length == 0) {
+          return("{}");
+        }
+        String result = "{";
+        for (int i = 0; i < arr.length-1; i ++) {
+          result= result + String.valueOf(arr[i]) + (", ");
+        }
+        return(result + String.valueOf(arr[arr.length-1]) + "}");
+    }
+      
     
     public static String arrayDeepToString(int[][] arr) {
         String result = "{ ";
